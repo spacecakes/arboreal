@@ -1,0 +1,284 @@
+/* CSS Reset for default browser styles */
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: Nunito, Verdana, sans-serif;
+  /*   border: 2px solid red;  
+ */
+  color: white;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banner  */
+.banner {
+  display: flex;
+  background-image: url("images/header.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+}
+
+.banner > img {
+  position: fixed;
+  z-index: 100;
+  padding: 1em;
+  width: 5em;
+  height: 5em;
+}
+h1 {
+  align-self: center;
+  flex: 1;
+  font-family: "Covered By Your Grace", cursive;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px rgb(0, 0, 0);
+}
+
+/* Styles the navigation bar */
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(252, 43, 88);
+  height: 40px;
+  transition: height 1s;
+}
+
+.nav-bar:hover {
+  height: 100px;
+}
+.nav-bar ul {
+  flex-basis: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-bar li {
+  flex: 0 1 150px;
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar li:hover {
+  background-color: rgb(253, 186, 0);
+}
+
+.nav-bar li:hover * {
+  color: white;
+  font-family: Pacifico, cursive;
+  text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
+}
+
+.nav-bar-fixed {
+  position: fixed;
+}
+
+/* General body styling */
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(150, 187, 187);
+}
+
+body > section {
+  width: 100%;
+  font-size: 1.2em;
+  margin: 2em;
+}
+
+footer {
+  padding: 5em;
+  text-align: center;
+}
+
+/* General main sections */
+h2 {
+  font-family: Pacifico, cursive;
+  font-size: 4em;
+  text-align: center;
+  color: rgb(253, 186, 0);
+  text-shadow: 5px 5px #ffffff;
+  margin-bottom: 0.2em;
+}
+
+.container {
+  padding: 5% 10% 5% 10%;
+}
+
+.container:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.199);
+}
+
+/* Mission section */
+.mission {
+  display: flex;
+  flex-direction: column;
+}
+.mission img {
+  margin: 5%;
+  align-self: center;
+  width: 15%;
+}
+.mission {
+  max-width: 1000px;
+  padding: 0;
+}
+.mission p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+p,
+h3 {
+  padding: 0.5em;
+}
+
+/* Pricing table */
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  max-width: 1000px;
+  padding: 5% 0% 5% 0%;
+  margin: 0;
+}
+
+.pricing h2 {
+  flex-basis: 100%;
+}
+.pricing > section {
+  box-sizing: content-box;
+  margin: 2em 0.5vh 0.5vh 0.5vh;
+  text-align: center;
+  background-color: rgba(164, 41, 201, 0.226);
+  border-radius: 10px;
+  border: 5px dashed white;
+  transition: padding 2s;
+}
+
+.pricing > section:hover {
+  padding: 15px;
+}
+
+.standard,
+.premium {
+  flex: 1 1 20%;
+}
+.exclusive {
+  flex: 1 1 40%;
+}
+
+/* Styles list items in pricing section */
+.pricing li {
+  padding: 1.2em;
+}
+.pricing li:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.pricing li:last-of-type {
+  font-size: 1.5em;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: rgb(253, 186, 0);
+}
+
+/* Contact form */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > div {
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 300px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em;
+}
+
+label {
+  margin: 0.5em 0 0.5em 0;
+}
+form > div > input,
+textarea {
+  padding: 2%;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Submit button */
+
+input[type="submit"] {
+  margin-top: 2em;
+  align-self: center;
+  border-radius: 10px;
+  color: rgb(179, 112, 160);
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 10rem;
+  background-color: white;
+  margin: auto;
+}
+
+input[type="submit"]:hover,
+.pricing li:last-of-type:hover {
+  transition: color 0.2s ease-out, background 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-out, background 0.2s ease-in;
+  color: white;
+  background-color: #6ba89c;
+}
+
+/* Placeholder text */
+::-webkit-input-placeholder {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: rgb(160, 160, 160);
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 699px) {
+  .nav-bar {
+    position: fixed;
+  }
+  .banner > img {
+    display: none;
+  }
+  .banner {
+    margin-top: 50px;
+    height: 35vh;
+  }
+  .heading {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .banner {
+    background-image: none;
+  }
+  .heading {
+    font-size: 2em;
+  }
+  .nav-bar {
+    font-size: 0.5rem;
+  }
+}
