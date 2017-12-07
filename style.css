@@ -284,6 +284,7 @@ input[type="submit"]:hover,
   .nav-bar li {
     flex: 1 1 50%;
   }
+
   .banner > a {
     display: none;
   }
