@@ -90,6 +90,9 @@ h1 {
 .nav-bar-fixed {
   position: fixed;
 }
+.nav-bar-offset {
+  margin-top: 80px;;  
+}
 
 /* General body styling */
 body {
