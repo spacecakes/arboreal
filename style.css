@@ -5,8 +5,6 @@
   padding: 0;
   margin: 0;
   font-family: Nunito, Verdana, sans-serif;
-  /*   border: 2px solid red;  
- */
   color: white;
   box-sizing: border-box;
 }
@@ -83,8 +81,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   transition: height 1s;
-  
-  
+    
 }
 .nav-bar li {
   flex: 0 1 150px;
@@ -113,6 +110,19 @@ footer {
   display: block;
 }
 
+/* Fixes navbar to top after scroll
+### Replaced by position: sticky ###
+.nav-bar-fixed {
+  position: fixed;  
+}
+.nav-bar-fixed ul:hover {
+  height: 100px;  
+}
+
+.nav-bar-offset {
+  margin-top: 80px;;  
+}
+ */
 /* General main sections */
 h2 {
   font-family: Pacifico, cursive;
