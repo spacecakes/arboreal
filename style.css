@@ -42,28 +42,32 @@ h1 {
 
 /* General body styling */
 body {
-  font-family: Nunito, Verdana, sans-serif;  
+  font-family: Nunito, Verdana, sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;  
-  background-color: rgb(150, 187, 187);
+  color: white;
 }
-
-body > section {
+* {
+  border: 2px solid blue;
+}
+.body-wrapper {
   width: 100%;
   font-size: 1.2em;
+  background-color: rgb(150, 187, 187);
 }
 
 footer {
   padding: 5em;
   text-align: center;
+  background-color: rgb(150, 187, 187);
+  width: 100%;
 }
 
 /* Navigation bar */
 nav * {
-  color: white;  
-  font-family: Nunito, Verdana, sans-serif;  
+  color: white;
+  font-family: Nunito, Verdana, sans-serif;
 }
 .nav-bar {
   position: sticky;
@@ -94,12 +98,12 @@ nav * {
   justify-content: center;
 }
 
-.nav-bar:hover {
-  height: 100px;
+.navbar a {
+  display: block;
 }
 
-.nav-bar li:hover {
-  background-color: rgb(253, 186, 0);
+.nav-bar:hover {
+  height: 100px;
 }
 
 .nav-bar li:hover * {
@@ -107,10 +111,15 @@ nav * {
   font-family: Pacifico, cursive;
   text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
 }
-.navbar a {
-  display: block;
-}
 
+/* Navbar/button hover behavior */
+.nav-bar li:hover,
+.contact input[type="submit"]:hover,
+.pricing li:last-of-type:hover {
+  background-color: rgb(253, 186, 0);
+  transition: color 0.2s ease-out, background 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-out, background 0.2s ease-in;
+}
 /* Fixes navbar to top after scroll
 ### Replaced by position: sticky ###
 .nav-bar-fixed {
@@ -135,11 +144,16 @@ h2 {
   margin-bottom: 0.2em;
 }
 
-.container {
+p,
+h3 {
+  padding: 0.5em;
+}
+
+.section-wrapper {
   padding: 5% 10% 5% 10%;
 }
 
-.container:nth-of-type(even) {
+.section-wrapper:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.199);
 }
 
@@ -158,13 +172,9 @@ h2 {
   font-size: 1.5em;
 }
 
-p,
-h3 {
-  padding: 0.5em;
-}
-
 /* Pricing table */
-.pricing {
+.pricing-sub-section {
+  border: 2px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -172,13 +182,12 @@ h3 {
   width: 80vw;
   max-width: 1000px;
   padding: 5% 0% 5% 0%;
-  margin: 0;
+  margin: auto;
 }
 
-.pricing h2 {
-  flex-basis: 100%;
-}
-.pricing > section {
+.pricing-sub-section > .standard,
+.premium,
+.exclusive {
   box-sizing: content-box;
   margin: 2em 0.5vh 0.5vh 0.5vh;
   text-align: center;
@@ -188,8 +197,9 @@ h3 {
   transition: padding 2s;
 }
 
-.pricing > section:hover {
+.price-tag:hover {
   padding: 15px;
+
 }
 
 .standard,
@@ -211,11 +221,10 @@ h3 {
   font-size: 1.5em;
   font-weight: 700;
   border-radius: 10px;
-  background-color: rgb(253, 186, 0);
+  background-color: rgb(252, 43, 88);
 }
 
 /* Contact form */
-
 .contact {
   display: flex;
   flex-direction: column;
@@ -225,7 +234,6 @@ h3 {
 .contact form {
   display: flex;
   flex-wrap: wrap;
-  padding: 0.5em;
 }
 
 .contact div {
@@ -250,20 +258,12 @@ textarea {
   margin-top: 2em;
   align-self: center;
   border-radius: 10px;
-  color: rgb(179, 112, 160);
   font-size: 1.2em;
   font-weight: 700;
   width: 10rem;
-  background-color: white;
-  margin: auto;
-}
-
-.contact input[type="submit"]:hover,
-.pricing li:last-of-type:hover {
-  transition: color 0.2s ease-out, background 0.2s ease-in;
-  -webkit-transition: color 0.2s ease-out, background 0.2s ease-in;
   color: white;
-  background-color: #6ba89c;
+  background-color: rgb(252, 43, 88);
+  margin: auto;
 }
 
 /* Responsive tweaks */
