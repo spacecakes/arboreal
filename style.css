@@ -96,7 +96,10 @@ h1 {
   position: fixed;  
 }
 .nav-bar-fixed ul:hover {
-  /* This one doesn't grow. WHY!? */
+  /* 
+  This one doesn't grow. WHY!?
+  Ugly hack to make it work below:
+  */
   height: 100px;  
 }
 
