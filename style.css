@@ -257,16 +257,19 @@ input[type="submit"]:hover,
 
 /* Responsive tweaks */
 @media screen and (max-width: 999px) {
-  .nav-bar {
-    position: fixed;
-    height: 45px;
-  }
-  .nav-bar:hover {
-    height: 45px;
-  }
 }
 
 @media screen and (max-width: 699px) {
+  .nav-bar {
+    position: fixed;
+    height: auto;
+  }
+  .nav-bar:hover {
+    height: auto;
+  }
+  .nav-bar li {
+    flex: 1 1 50%;
+  }
   .banner > img {
     display: none;
   }
@@ -283,10 +286,12 @@ input[type="submit"]:hover,
   .banner {
     background-image: none;
   }
+
   .heading {
     font-size: 2em;
   }
-  .nav-bar {
-    font-size: 0.5rem;
+  
+  .nav-bar li {
+    flex: 1 1 100%;
   }
 }
