@@ -6,7 +6,7 @@ jQuery("document").ready(function($) {
 
 
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 790) {
+    if ($(this).scrollTop() > 1000) {
       nav.addClass("nav-bar-fixed");
     } else {
       nav.removeClass("nav-bar-fixed");
