@@ -270,11 +270,7 @@ input[type="submit"]:hover,
 }
 
 /* Placeholder text */
-::placeholder {
-  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
-  color: rgb(160, 160, 160);
-}
+
 
 /* Responsive tweaks */
 @media screen and (max-width: 999px) {
