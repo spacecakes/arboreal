@@ -14,6 +14,7 @@
 header {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* Banner  */
@@ -22,7 +23,6 @@ header {
   background-image: url("images/header.jpg");
   background-size: cover;
   background-position: center;
-  width: 100vw;
   height: 70vh;
 }
 
