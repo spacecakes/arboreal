@@ -53,7 +53,6 @@ body {
 body > section {
   width: 100%;
   font-size: 1.2em;
-  margin: 2em;
 }
 
 footer {
@@ -145,23 +144,18 @@ h2 {
 }
 
 /* Mission section */
-.mission {
-  display: flex;
-  flex-direction: column;
-}
-
 .mission img {
-  margin: 5%;
-  align-self: center;
-  width: 25%;
-}
-.mission {
-  max-width: 1000px;
-  padding: 0;
+  display: block;
+  margin: auto;
+  width: 20%;
+  padding: 2em;
 }
 .mission p {
-  font-size: 1.5em;
+  display: block;
+  margin: auto;
+  max-width: 1000px;
   text-align: center;
+  font-size: 1.5em;
 }
 
 p,
@@ -221,29 +215,29 @@ h3 {
 }
 
 /* Contact form */
+
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-form > div {
-  padding: 20px;
-  display: flex;
-  flex-flow: column wrap;
-  flex: 1 1 300px;
-}
-
-form {
+.contact form {
   display: flex;
   flex-wrap: wrap;
   padding: 0.5em;
 }
 
-label {
+.contact div {
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 300px;
+}
+.contact label {
   margin: 0.5em 0 0.5em 0;
 }
-form > div > input,
+.contact input,
 textarea {
   padding: 1em;
   border-radius: 5px;
@@ -252,7 +246,7 @@ textarea {
 }
 
 /* Submit button */
-input[type="submit"] {
+.contact input[type="submit"] {
   margin-top: 2em;
   align-self: center;
   border-radius: 10px;
@@ -264,7 +258,7 @@ input[type="submit"] {
   margin: auto;
 }
 
-input[type="submit"]:hover,
+.contact input[type="submit"]:hover,
 .pricing li:last-of-type:hover {
   transition: color 0.2s ease-out, background 0.2s ease-in;
   -webkit-transition: color 0.2s ease-out, background 0.2s ease-in;
