@@ -13,19 +13,20 @@ header {
 }
 
 /* Banner background image */
-.banner {
+.hero-image {
   height: 1000px;  
   width: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   background-image: url("images/header.jpg");
   background-size: cover;
   background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .top-logo {
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   padding: 1em;
   width: 5em;
   height: 5em;
