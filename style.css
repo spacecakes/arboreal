@@ -4,8 +4,6 @@
   text-decoration: none;
   padding: 0;
   margin: 0;
-  font-family: Nunito, Verdana, sans-serif;
-  color: white;
   box-sizing: border-box;
 }
 
@@ -44,9 +42,11 @@ h1 {
 
 /* General body styling */
 body {
+  font-family: Nunito, Verdana, sans-serif;  
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: white;  
   background-color: rgb(150, 187, 187);
 }
 
@@ -62,6 +62,10 @@ footer {
 }
 
 /* Navigation bar */
+nav * {
+  color: white;  
+  font-family: Nunito, Verdana, sans-serif;  
+}
 .nav-bar {
   position: sticky;
   position: -webkit-sticky;
@@ -248,7 +252,6 @@ textarea {
 }
 
 /* Submit button */
-
 input[type="submit"] {
   margin-top: 2em;
   align-self: center;
@@ -268,9 +271,6 @@ input[type="submit"]:hover,
   color: white;
   background-color: #6ba89c;
 }
-
-/* Placeholder text */
-
 
 /* Responsive tweaks */
 @media screen and (max-width: 999px) {
