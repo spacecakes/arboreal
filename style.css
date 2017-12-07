@@ -136,10 +136,11 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+
 .mission img {
   margin: 5%;
   align-self: center;
-  width: 15%;
+  width: 25%;
 }
 .mission {
   max-width: 1000px;
