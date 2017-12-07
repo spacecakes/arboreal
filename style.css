@@ -26,7 +26,7 @@ header {
   height: 1000px;
 }
 
-.banner > img {
+.banner > a > img {
   position: fixed;
   z-index: 100;
   padding: 1em;
@@ -86,6 +86,7 @@ h1 {
   display: block;
 }
 
+/* Fixes navbar to top after scroll */
 .nav-bar-fixed {
   position: fixed;
 }
@@ -279,7 +280,7 @@ input[type="submit"]:hover,
   .nav-bar li {
     flex: 1 1 50%;
   }
-  .banner > img {
+  .banner > a {
     display: none;
   }
   .banner {

@@ -2,14 +2,18 @@
 
 jQuery("document").ready(function($) {
   const nav = $("#nav-bar");
-  const home = $("#navbar");  
-
+/*   const navOffset = $("#mission");  
+ */
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 1000) {
       nav.addClass("nav-bar-fixed");
+/*       navOffset.addClass("nav-bar-offset");
+ */      
     } else {
       nav.removeClass("nav-bar-fixed");
+/*       navOffset.addClass("nav-bar-offset");
+ */      
     }
   });
 });
