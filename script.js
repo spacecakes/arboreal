@@ -1,6 +1,8 @@
-/* Fixes menubar to top */
+/* Fixes menubar to top 
+No longer needed with position: sticky!
+*/
 
-jQuery("document").ready(function($) {
+/* jQuery("document").ready(function($) {
   const nav = $("#nav-bar");
   const navOffset = $("#mission");  
 
@@ -16,7 +18,7 @@ jQuery("document").ready(function($) {
       
     }
   });
-});
+}); */
 
 /* Smooth scrolling */
 // Select all links with hashes

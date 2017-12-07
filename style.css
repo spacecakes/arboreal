@@ -14,7 +14,7 @@
 header {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100%;  
 }
 
 /* Banner  */
@@ -23,7 +23,7 @@ header {
   background-image: url("images/header.jpg");
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  height: 1000px;  
 }
 
 .banner > a > img {
@@ -44,8 +44,30 @@ h1 {
   text-shadow: 3px 3px rgb(0, 0, 0);
 }
 
-/* Styles the navigation bar */
+/* General body styling */
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(150, 187, 187);
+}
+
+body > section {
+  width: 100%;
+  font-size: 1.2em;
+  margin: 2em;
+}
+
+footer {
+  padding: 5em;
+  text-align: center;
+}
+
+/* Navigation bar */
 .nav-bar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -71,7 +93,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;  
-}
+} 
 
 
 .nav-bar:hover {
@@ -89,42 +111,6 @@ h1 {
 }
 .navbar a {
   display: block;
-}
-
-/* Fixes navbar to top after scroll */
-.nav-bar-fixed {
-  position: fixed;  
-}
-.nav-bar-fixed ul:hover {
-  /* 
-  This one doesn't grow. WHY!?
-  Ugly hack to make it work below:
-  */
-  height: 100px;  
-}
-
-.nav-bar-offset {
-  margin-top: 80px;;  
-  
-}
-
-/* General body styling */
-body {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(150, 187, 187);
-}
-
-body > section {
-  width: 100%;
-  font-size: 1.2em;
-  margin: 2em;
-}
-
-footer {
-  padding: 5em;
-  text-align: center;
 }
 
 /* General main sections */
