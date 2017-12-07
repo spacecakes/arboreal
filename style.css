@@ -14,7 +14,7 @@ header {
 
 /* Banner background image */
 .hero-image {
-  height: 1000px;
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: -10;
@@ -22,8 +22,9 @@ header {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-/*   filter: blur(4px);
- */}
+  /*   filter: blur(4px);
+ */
+}
 
 .top-logo {
   position: fixed;
@@ -35,14 +36,14 @@ header {
 
 h1.heading {
   position: sticky;
-  position: -webkit-sticky;  
+  position: -webkit-sticky;
   top: 500px;
   width: 100%;
   z-index: -1;
   font-family: "Covered By Your Grace", cursive;
-  font-size: 5em;
+  font-size: 5vw;
   text-align: center;
-  text-shadow: 2px 2px 10px rgb(0, 0, 0), -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: 2px 2px 10px rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.438);
 }
 
@@ -161,7 +162,9 @@ h3 {
 .mission img {
   display: block;
   margin: auto;
-  width: 20%;
+  width: 25%;
+  min-width: 8rem;
+  max-width: 15rem;
   padding: 2em;
 }
 .mission p {
@@ -280,26 +283,40 @@ textarea {
     flex: 1 1 50%;
   }
 
-  .banner > a {
+  .top-logo {
     display: none;
   }
-  .banner {
-    margin-top: 50px;
+  header {
     height: 50vh;
   }
+  .hero-image {
+    height: 50vh;
+    background-position: center;
+  }
   h1.heading {
+    font-size: 2.5em;
+  }
+  h2 {
     font-size: 3em;
-    margin-top: 150px;
   }
 }
 
 @media screen and (max-width: 350px) {
-  h1.heading {
+  h1.heading
+  {
+    display: none;
+  }
+  h2 {
     font-size: 2em;
-    margin-top: 200px;
   }
 
   .nav-bar li {
     flex: 1 1 100%;
+  }
+  header {
+    height: auto;
+  }
+  .hero-image {
+    display: none;
   }
 }
