@@ -20,7 +20,7 @@ header {
   display: flex;
   background-image: url("images/header.jpg");
   background-size: cover;
-  background-position: center;   
+  background-position: center;
   width: 100vw;
   height: 70vh;
 }
@@ -222,7 +222,7 @@ label {
 }
 form > div > input,
 textarea {
-  padding: 2%;
+  padding: 1em;
   border-radius: 5px;
   border: none;
 }
@@ -256,10 +256,17 @@ input[type="submit"]:hover,
 }
 
 /* Responsive tweaks */
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 999px) {
   .nav-bar {
     position: fixed;
+    height: 45px;
   }
+  .nav-bar:hover {
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 699px) {
   .banner > img {
     display: none;
   }
