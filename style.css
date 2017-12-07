@@ -41,7 +41,7 @@ h1.heading {
   width: 100%;
   z-index: -1;
   font-family: "Covered By Your Grace", cursive;
-  font-size: 5vw;
+  font-size: 5em;
   text-align: center;
   text-shadow: 2px 2px 10px rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.438);
