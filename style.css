@@ -277,6 +277,9 @@ textarea {
   h2 {
     font-size: 3rem;
   }
+  .hero-image, header {
+    height: 90vh;
+  }
 }
 
 @media screen and (max-width: 699px) {
