@@ -270,6 +270,12 @@ textarea {
 
 /* Responsive tweaks */
 @media screen and (max-width: 999px) {
+  h1.heading {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 699px) {
@@ -287,18 +293,11 @@ textarea {
   .top-logo {
     display: none;
   }
-  header {
-    height: 50vh;
-  }
-  .hero-image {
-    height: 50vh;
-    background-position: center;
-  }
   h1.heading {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
   h2 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 }
 
@@ -308,14 +307,14 @@ textarea {
     display: none;
   }
   h2 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .nav-bar li {
     flex: 1 1 100%;
   }
   header {
-    height: auto;
+    height: 120px;
   }
   .hero-image {
     display: none;
