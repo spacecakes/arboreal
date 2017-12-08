@@ -148,7 +148,7 @@ footer {
 }
  */
 
-/* General main sections */
+/* Main sections */
 h2 {
   font-family: Pacifico, cursive;
   font-size: 4em;
@@ -164,6 +164,7 @@ h3 {
 }
 
 .section-wrapper {
+  margin: auto;
   padding: 5% 10% 5% 10%;
 }
 
@@ -171,7 +172,11 @@ h3 {
   background-color: rgba(255, 255, 255, 0.199);
 }
 
-/* Mission section */
+.sub-section {
+  margin: auto;
+  max-width: 1200px;
+}
+
 .mission .logo {
   display: block;
   margin: auto;
@@ -189,23 +194,18 @@ h3 {
   font-size: 1.5em;
 }
 
-/* Pricing table */
-.pricing-sub-section {
+.pricing .sub-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 80vw;
-  max-width: 1000px;
   padding: 5% 0% 5% 0%;
-  margin: auto;
 }
 
-.pricing-sub-section > .standard,
-.premium,
-.exclusive {
+.sub-section > .price-tag {
   box-sizing: content-box;
-  margin: 2em 0.5vh 0.5vh 0.5vh;
+  margin: 1.5vh;
   text-align: center;
   background-color: rgb(160, 128, 170);
   background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
