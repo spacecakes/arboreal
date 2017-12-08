@@ -5,12 +5,14 @@ https://spacecakes.github.io/arboreal/
 Website originally made as a CSS and HTML excercise and is my first website created from scratch.
 
 ##Design choices
-I wanted a lively, playful look with nice colors. The look *does not* match the business-y corporation it's intended for, but since this wasn't a design assignment I decided to go for my own look and view the content as placeholders.
+I wanted a lively, playful look with vivid colors. The look *does not* match the business-y corporation it's intended for, but since this wasn't a graphic design assignment I decided to go for my own look and view the content merely as placeholders.
 
-It uses a (sticky) menubar on top, parallax scrolling and is fully responsive. 
+It uses a (sticky) menubar on top, parallax scrolling and is fully responsive. Subtle use of animation to make some parts a little more interesting and playful.
 
 ##Validation
 The website validates with the exception of a few experimental, but non-critical features. I decided to keep these because they do not affect the experience poorly in any way. Instead, they provide tiny benefits in browsers that do support it: a sticky menubar and background blur (in Safari).
+
+*Everything else is fully functional and properly validates*.
 
 ###Errors
 ```
