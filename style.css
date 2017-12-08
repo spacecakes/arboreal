@@ -256,6 +256,7 @@ h3 {
 }
 
 /* Contact form */
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -265,6 +266,8 @@ h3 {
 .contact form {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1000px;
+  
 }
 
 .contact .sub-section {
