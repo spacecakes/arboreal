@@ -62,13 +62,13 @@ body {
 .body-wrapper {
   width: 100%;
   font-size: 1.2em;
-  background-color: rgb(150, 187, 187);
+ background: linear-gradient(rgb(150, 187, 187), rgb(104, 179, 179));
 }
 
 footer {
   padding: 5em;
   text-align: center;
-  background-color: rgb(150, 187, 187);
+  background-color: rgb(104, 179, 179);
   width: 100%;
 }
 
@@ -194,7 +194,8 @@ h3 {
   box-sizing: content-box;
   margin: 2em 0.5vh 0.5vh 0.5vh;
   text-align: center;
-  background-color: rgba(164, 41, 201, 0.226);
+  background-color: rgb(160, 128, 170);
+   background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
   border-radius: 10px;
   border: 5px dashed white;
   transition: padding 2s;
