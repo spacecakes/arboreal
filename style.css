@@ -275,11 +275,18 @@ h3 {
 .contact input[type="text"],
 textarea {
   display: block;
-  padding: 1em;
+  padding: 0.5em;
+  font-size: 1em;
   border: 3px solid rgb(253, 186, 0);
   border-radius: 5px;
   color: black;
   width: 100%;
+}
+.contact input[type="text"]:focus,
+textarea:focus {
+  transition: color 0.2s ease-out, background 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-out, background 0.2s ease-in;
+  background-color: rgb(253, 186, 0);
 }
 .contact .sub-section:last-of-type * {
   margin: auto;
@@ -294,12 +301,14 @@ textarea {
   h2 {
     font-size: 3rem;
   }
-  .mission {
-    border-top: 5px solid rgb(252, 43, 88);
-  }
 }
 
 @media screen and (max-width: 699px) {
+  .top-logo {
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+  }
   .nav-bar {
     position: fixed;
     height: auto;
@@ -310,11 +319,9 @@ textarea {
   .nav-bar li {
     flex: 1 1 50%;
   }
-
-  .top-logo {
-    top: auto;
-    bottom: 20px;
-    left: 20px;
+  
+  .mission {
+    border-top: 5px solid rgb(252, 43, 88);
   }
   .slogan h1 {
     font-size: 2.5rem;
