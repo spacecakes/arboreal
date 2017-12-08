@@ -81,7 +81,7 @@ footer {
   width: 100%;
 }
 
-/* Navigation bar */
+/* Navigation bar & buttons */
 
 .nav-bar {
   position: sticky;
@@ -116,6 +116,21 @@ footer {
   display: block;
 }
 
+.button {
+  -webkit-appearance: none;
+  align-self: center;
+  border: 0;
+  height: 80px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+  background-color: rgb(252, 43, 88);
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
 /* Navbar/button hover behavior */
 .nav-bar:hover {
   height: 100px;
@@ -125,11 +140,13 @@ footer {
   text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
 }
 .nav-bar li:hover,
-.contact input[type="submit"]:hover,
-.pricing li:last-of-type:hover {
+.button:hover{
   background-color: rgb(253, 186, 0);
+  border: 5px solid white;
   transition: color 0.2s ease-out, background 0.2s ease-in;
   -webkit-transition: color 0.2s ease-out, background 0.2s ease-in;
+  transition: border 0.2s ease-out;
+  -webkit-transition: border 0.2s ease-out;
 }
 /* Fixes navbar to top after scroll
 ### Replaced by position: sticky ###
@@ -166,7 +183,7 @@ h3 {
 }
 
 .section-wrapper:nth-of-type(even) {
-  background-color: rgba(255, 255, 255, 0.199);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sub-section {
@@ -191,6 +208,8 @@ h3 {
   font-size: 1.5em;
 }
 
+/* Price section */
+
 .pricing .sub-section {
   display: flex;
   flex-wrap: wrap;
@@ -200,41 +219,40 @@ h3 {
   padding: 5% 0% 5% 0%;
 }
 
-.sub-section > .price-tag {
+.price-tag {
   box-sizing: content-box;
   margin: 1.5vh;
   text-align: center;
-  background-color: rgb(160, 128, 170);
-  background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
   border-radius: 10px;
   border: 5px dashed white;
   transition: padding 2s;
+  flex: 1 1 20%;
+  background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  
 }
 
 .price-tag:hover {
   padding: 1rem;
 }
 
-.standard,
-.premium {
-  flex: 1 1 20%;
-}
-.exclusive {
+.price-tag.exclusive {
   flex: 1 1 40%;
 }
 
-/* Styles list items in pricing section */
-.pricing li {
+.price-tag li {
   padding: 1.2em;
 }
-.pricing li:nth-of-type(even) {
+.price-tag li:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.pricing li:last-of-type {
-  font-size: 1.5em;
-  font-weight: 700;
-  border-radius: 10px;
-  background-color: rgb(252, 43, 88);
+
+.price-tag.premium li:last-of-type {
+  background-color: rgb(214, 212, 212);
+}
+
+.price-tag.exclusive li:last-of-type{
+  background-color: rgb(253, 186, 0);
 }
 
 /* Contact form */
@@ -249,35 +267,23 @@ h3 {
   flex-wrap: wrap;
 }
 
-.contact div {
-  padding: 20px;
-  display: flex;
-  flex-flow: column wrap;
+.contact .sub-section {
+  padding: 1em;
   flex: 1 1 300px;
 }
-.contact label {
-  margin: 0.5em 0 0.5em 0;
-}
-.contact input,
-textarea {
-  padding: 1em;
-  border-radius: 5px;
-  border: none;
-  color: black;
-}
 
-/* Submit button */
-.contact input[type="submit"] {
-  -webkit-appearance: none;
-  margin-top: 2em;
-  align-self: center;
-  border-radius: 10px;
-  font-size: 1.2em;
-  font-weight: 700;
-  width: 10rem;
-  color: white;
-  background-color: rgb(252, 43, 88);
+.contact input[type="text"],
+textarea {
+  display: block;
+  padding: 1em;
+  border: 3px solid rgb(253, 186, 0);
+  border-radius: 5px;
+  color: black;
+  width: 100%;
+}
+.contact .sub-section:last-of-type * {
   margin: auto;
+  display: block;
 }
 
 /* Responsive tweaks */
