@@ -132,30 +132,31 @@ footer {
 }
 
 /* Navbar/button hover behavior */
-.nav-bar:hover {
-  height: 100px;
+@media screen and (min-width: 1025px) {
+  .nav-bar:hover {
+    height: 100px;
+  }
+  .nav-bar li:hover a {
+    font-family: Pacifico, cursive;
+    text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
+    font-size: 120%;
+    transition: font-size 0.1s ease;
+  }
+  .top-logo:hover {
+    width: 40px;
+    transition: width 0.1s ease;
+  }
+  .nav-bar li:hover,
+  .button:hover {
+    background-color: rgb(253, 186, 0);
+    transition: all 0.1s ease;
+  }
+  .button:hover {
+    border: 5px solid white;
+    font-size: 150%;
+  }
 }
-.nav-bar li:hover a {
-  font-family: Pacifico, cursive;
-  text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
-  font-size: 120%;
-  transition: font-size 0.1s ease;  
-}
-.top-logo:hover {
-  width: 40px;
-  transition: width 0.1s ease;
-}
-.nav-bar li:hover,
-.button:hover {
-  background-color: rgb(253, 186, 0);
-  transition: all 0.1s ease;  
-}
-.button:hover {
-  border: 5px solid white;
-  font-size: 150%;
-}
-
-.nav-bar li:active a{
+.nav-bar li:active a {
   font-size: 100%;
 }
 .button:active {
@@ -308,7 +309,7 @@ textarea:focus {
   display: block;
 }
 
-/* Responsive tweaks */
+/* Mobile tweaks */
 @media screen and (max-width: 999px) {
   .slogan h1 {
     font-size: 3rem;
