@@ -37,7 +37,7 @@ header,
   height: 80px;
   margin-top: -80px;
   background-image: url("images/grass.png");
-  background-position: left bottom;
+  background-position: center bottom;
   background-size: auto 100%;
   background-repeat: repeat-x;
   
