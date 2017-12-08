@@ -19,7 +19,7 @@ header,
   z-index: -10;
   background-image: url("images/header.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: right;
   background-repeat: no-repeat;
 }
 
@@ -31,13 +31,25 @@ header,
   width: 30px;
 }
 
+.body-top{
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  margin-top: -80px;
+  background-image: url("images/grass.png");
+  background-position: left bottom;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  
+  
+}
+
 .slogan {
   position: sticky;
   position: -webkit-sticky;
   top: 40vh;
   margin: auto;
   width: 100%;
-  z-index: -1;
   -webkit-backdrop-filter: blur(10px);
 }
 .slogan h1 {
