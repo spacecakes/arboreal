@@ -184,6 +184,12 @@ footer {
 }
 
 /* Hover/active behaviors */
+.nav-bar li:active a {
+  font-size: 100%;
+}
+.button:active {
+  font-size: 130%;
+}
 @media screen and (min-width: 1025px) {
   .nav-bar:hover {
     height: 100px;
@@ -207,12 +213,6 @@ footer {
     border: 5px solid white;
     font-size: 150%;
   }
-}
-.nav-bar li:active a {
-  font-size: 100%;
-}
-.button:active {
-  font-size: 130%;
 }
 
 /* Main sections */
