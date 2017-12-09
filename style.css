@@ -7,13 +7,12 @@
   box-sizing: border-box;
 }
 
+/* Hero image, titles and logo*/
 header,
 .hero-image {
   width: 100%;
   height: 80vh;
 }
-
-/* Hero image, title and logo*/
 .hero-image {
   position: fixed;
   z-index: -10;
@@ -22,7 +21,6 @@ header,
   background-position: right;
   background-repeat: no-repeat;
 }
-
 .top-logo {
   position: fixed;
   top: 20px;
@@ -30,7 +28,6 @@ header,
   z-index: 1;
   width: 30px;
 }
-
 .body-top {
   padding: 0;
   width: 100%;
@@ -41,8 +38,7 @@ header,
   background-size: auto 100%;
   background-repeat: repeat-x;
 }
-
-.slogan {
+.slogan-wrapper {
   position: sticky;
   position: -webkit-sticky;
   top: 40vh;
@@ -50,11 +46,58 @@ header,
   width: 100%;
   -webkit-backdrop-filter: blur(10px);
 }
-.slogan h1 {
+h1.slogan {
   font-size: 4em;
   text-align: center;
   text-shadow: 2px 2px rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.11);
+}
+h2.heading {
+  font-family: Pacifico, cursive;
+  font-size: 4em;
+  text-align: center;
+  color: rgb(253, 186, 0);
+  text-shadow: 3px 3px #ffffff;
+  margin-bottom: 0.2em;
+}
+
+@media screen and (max-width: 999px) {
+  h1.slogan {
+    font-size: 3rem;
+  }
+  h2.heading {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .top-logo {
+    top: auto;
+    bottom: 20px;
+    left: 20px;
+  }
+  h1.slogan {
+    font-size: 2.5rem;
+  }
+  h2.heading {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    height: 120px;
+  }
+  .slogan-wrapper,
+  .hero-image {
+    display: none;
+  }
+  .mission h1 {
+    font-size: 1.2rem;
+  }
+  h2.heading {
+    font-size: 2rem;
+  }
 }
 
 /* General body styling */
@@ -67,13 +110,11 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
 .body-wrapper {
   width: 100%;
   font-size: 1.2em;
   background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
 }
-
 footer {
   padding: 5em;
   text-align: center;
@@ -82,7 +123,6 @@ footer {
 }
 
 /* Navigation bar & buttons */
-
 .nav-bar {
   position: sticky;
   position: -webkit-sticky;
@@ -94,7 +134,6 @@ footer {
   height: 40px;
   transition: height 1s;
 }
-
 .nav-bar ul {
   flex-basis: 100%;
   height: 100%;
@@ -111,11 +150,24 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
 .navbar a {
   display: block;
 }
 
+@media screen and (max-width: 699px) {
+  .nav-bar {
+    position: fixed;
+    height: auto;
+  }
+  .nav-bar li {
+    flex: 1 1 50%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .nav-bar li {
+    flex: 1 1 100%;
+  }
+}
 .button {
   -webkit-appearance: none;
   align-self: center;
@@ -131,7 +183,7 @@ footer {
   text-align: center;
 }
 
-/* Navbar/button hover behavior */
+/* Hover/active behaviors */
 @media screen and (min-width: 1025px) {
   .nav-bar:hover {
     height: 100px;
@@ -163,49 +215,22 @@ footer {
   font-size: 130%;
 }
 
-/* Fixes navbar to top after scroll
-### Replaced by position: sticky ###
-.nav-bar-fixed {
-  position: fixed;  
-}
-.nav-bar-fixed ul:hover {
-  height: 100px;  
-}
-
-.nav-bar-offset {
-  margin-top: 80px;;  
-}
- */
-
 /* Main sections */
-h2 {
-  font-family: Pacifico, cursive;
-  font-size: 4em;
-  text-align: center;
-  color: rgb(253, 186, 0);
-  text-shadow: 3px 3px #ffffff;
-  margin-bottom: 0.2em;
-}
-
 p,
 h3 {
   padding: 0.7em;
 }
-
 .section-wrapper {
   margin: auto;
   padding: 5% 10% 5% 10%;
 }
-
 .section-wrapper:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .sub-section {
   margin: auto;
   max-width: 1200px;
 }
-
 .mission .logo {
   display: block;
   margin: auto;
@@ -223,8 +248,16 @@ h3 {
   font-size: 1.5em;
 }
 
-/* Price section */
+@media screen and (max-width: 699px) {
+  .mission.section-wrapper {
+    border-top: 5px solid rgb(252, 43, 88);
+  }
+  .mission h1 {
+    font-size: 1.5rem;
+  }
+}
 
+/* Price section */
 .pricing .sub-section {
   display: flex;
   flex-wrap: wrap;
@@ -233,7 +266,6 @@ h3 {
   width: 80vw;
   padding: 5% 0% 5% 0%;
 }
-
 .price-tag {
   box-sizing: content-box;
   margin: 1.5vh;
@@ -245,49 +277,40 @@ h3 {
   background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
 }
-
 .price-tag:hover {
   padding: 1rem;
 }
-
 .price-tag.exclusive {
   flex: 1 1 40%;
 }
-
 .price-tag li {
   padding: 1.2em;
 }
 .price-tag li:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
 .price-tag.premium li:last-of-type {
   background-color: rgb(182, 182, 182);
 }
-
 .price-tag.exclusive li:last-of-type {
   background-color: rgb(253, 186, 0);
 }
 
 /* Contact form */
-
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .contact form {
   display: flex;
   flex-wrap: wrap;
   max-width: 1000px;
 }
-
 .contact .sub-section {
   padding: 1em;
   flex: 1 1 300px;
 }
-
 .contact input[type="text"],
 textarea {
   display: block;
@@ -307,65 +330,4 @@ textarea:focus {
 .contact .sub-section:last-of-type * {
   margin: auto;
   display: block;
-}
-
-/* Mobile tweaks */
-@media screen and (max-width: 999px) {
-  .slogan h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 699px) {
-  .top-logo {
-    top: auto;
-    bottom: 20px;
-    left: 20px;
-  }
-  .nav-bar {
-    position: fixed;
-    height: auto;
-  }
-  .nav-bar:hover {
-    height: auto;
-  }
-  .nav-bar li {
-    flex: 1 1 50%;
-  }
-
-  .mission {
-    border-top: 5px solid rgb(252, 43, 88);
-  }
-  .slogan h1 {
-    font-size: 2.5rem;
-  }
-  .mission h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  header {
-    height: 120px;
-  }
-  .slogan,
-  .hero-image {
-    display: none;
-  }
-  .mission h1 {
-    font-size: 1.2rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-
-  .nav-bar li {
-    flex: 1 1 100%;
-  }
 }
