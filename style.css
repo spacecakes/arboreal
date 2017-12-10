@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-/* Hero image, titles and logo*/
+/*### Hero image, titles and logo ###*/
 header,
 .hero-image {
   width: 100%;
@@ -25,8 +25,17 @@ header,
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 1;
+  z-index: 100;
   width: 30px;
+  transition: transform 0.2s;
+  
+}
+
+/* Logo behavor on desktop */
+@media screen and (min-width: 1025px) {
+  .top-logo:hover {
+    transform: scale(1.2);
+  }
 }
 .body-top {
   padding: 0;
@@ -61,15 +70,17 @@ h2.heading {
   margin-bottom: 0.2em;
 }
 
-@media screen and (max-width: 999px) {
+/* Mobile heading sizes */
+@media screen and (max-width: 1025px) {
   h1.slogan {
     font-size: 3rem;
   }
   h2.heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
 
+/* Smartphone */
 @media screen and (max-width: 699px) {
   .top-logo {
     top: auto;
@@ -84,6 +95,7 @@ h2.heading {
   }
 }
 
+/* Dumb phone */
 @media screen and (max-width: 350px) {
   header {
     height: 120px;
@@ -92,15 +104,12 @@ h2.heading {
   .hero-image {
     display: none;
   }
-  .mission h1 {
-    font-size: 1.2rem;
-  }
   h2.heading {
     font-size: 2rem;
   }
 }
 
-/* General body styling */
+/*### General body styling ###*/
 body * {
   color: white;
   font-family: Nunito, Verdana, sans-serif;
@@ -122,7 +131,7 @@ footer {
   width: 100%;
 }
 
-/* Navigation bar & buttons */
+/*### Navigation bar & buttons ###*/
 .nav-bar {
   position: sticky;
   position: -webkit-sticky;
@@ -133,6 +142,7 @@ footer {
   background-color: rgb(252, 43, 88);
   height: 40px;
   transition: height 1s;
+  z-index: 99;
 }
 .nav-bar ul {
   flex-basis: 100%;
@@ -183,7 +193,7 @@ footer {
   text-align: center;
 }
 
-/* Hover/active behaviors */
+/* Interactive hover/active behaviors */
 .nav-bar li:active a {
   font-size: 100%;
 }
@@ -200,10 +210,6 @@ footer {
     font-size: 120%;
     transition: font-size 0.1s ease;
   }
-  .top-logo:hover {
-    width: 40px;
-    transition: width 0.1s ease;
-  }
   .nav-bar li:hover,
   .button:hover {
     background-color: rgb(253, 186, 0);
@@ -215,7 +221,7 @@ footer {
   }
 }
 
-/* Main sections */
+/*### Main sections ###*/
 p,
 h3 {
   padding: 0.7em;
@@ -223,7 +229,16 @@ h3 {
 .section-wrapper {
   margin: auto;
   padding: 5% 10% 5% 10%;
+  transition: transform 1s;  
 }
+
+/* Grow sections on desktop */
+@media screen and (min-width: 1025px) {
+  .section-wrapper:hover {
+    transform: scale(1.02);
+  }
+}
+
 .section-wrapper:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -248,6 +263,7 @@ h3 {
   font-size: 1.5em;
 }
 
+/* Smartphone mission tweaks */
 @media screen and (max-width: 699px) {
   .mission.section-wrapper {
     border-top: 5px solid rgb(252, 43, 88);
@@ -272,13 +288,13 @@ h3 {
   text-align: center;
   border-radius: 10px;
   border: 5px dashed white;
-  transition: padding 2s;
+  transition: transform 2s;
   flex: 1 1 20%;
   background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
 }
 .price-tag:hover {
-  padding: 1rem;
+  transform: scale(1.05);
 }
 .price-tag.exclusive {
   flex: 1 1 40%;
@@ -296,7 +312,7 @@ h3 {
   background-color: rgb(253, 186, 0);
 }
 
-/* Contact form */
+/*### Contact form ###*/
 .contact {
   display: flex;
   flex-direction: column;
