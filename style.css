@@ -8,19 +8,6 @@
 }
 
 /*### Hero image, titles and logo ###*/
-header,
-.hero-image {
-  width: 100%;
-  height: 80vh;
-}
-.hero-image {
-  position: fixed;
-  z-index: -10;
-  background-image: url("images/header.jpg");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-}
 .top-logo {
   position: fixed;
   top: 20px;
@@ -36,6 +23,19 @@ header,
     animation-duration: 1.2s;
   }
 }
+header,
+.hero-image {
+  width: 100%;
+  height: 80vh;
+}
+.hero-image {
+  position: fixed;
+  z-index: -10;
+  background-image: url("images/header.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
 .body-top {
   padding: 0;
   width: 100%;
@@ -49,15 +49,15 @@ header,
 .slogan-wrapper {
   position: sticky;
   position: -webkit-sticky;
-  top: 40vh;
-  margin: auto;
+  height: 100%;
   width: 100%;
   -webkit-backdrop-filter: blur(10px);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 h1.slogan,
-h2.heading
-{
+h2.heading {
   font-family: Pacifico, cursive;
   text-align: center;
   color: rgb(253, 186, 0);
@@ -66,10 +66,10 @@ h2.heading
 }
 h1.slogan {
   background-color: rgba(0, 0, 0, 0.11);
-  font-size: 3.8vw;  
+  font-size: 3.8vw;
 }
 h2.heading {
-  font-size: 4em;  
+  font-size: 4em;
 }
 
 /* Mobile heading sizes */
@@ -133,15 +133,15 @@ footer {
   width: 100%;
 }
 .back-to-top * {
-  color: rgb(124, 201, 201);  
+  color: rgb(124, 201, 201);
   text-transform: uppercase;
 }
 .back-to-top a {
   margin-top: 10rem;
-  display:block;
+  display: block;
   font-size: 5rem;
   animation: bounce;
-  animation-duration:1.2s;
+  animation-duration: 1.2s;
   animation-iteration-count: infinite;
 }
 
@@ -224,8 +224,8 @@ footer {
   .nav-bar:hover {
     transform: scaleY(2) translateY(10px);
   }
-   
-  .nav-bar:hover a{
+
+  .nav-bar:hover a {
     transform: scaleY(0.5) scale(1.2);
   }
   .nav-bar li:hover a {
@@ -301,13 +301,14 @@ h3 {
   height: 200px;
   border: 5px solid white;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;  
-  transition: transform 0.5s;  
-  object-fit: cover;  
+  border-radius: 10px;
+  transition: transform 0.5s;
+  object-fit: cover;
 }
 
 /* Specific sections hover behaviors */
-.price-tag:hover, .theme-image:hover {
+.price-tag:hover,
+.theme-image:hover {
   transform: scale(1.02);
 }
 
