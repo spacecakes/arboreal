@@ -27,20 +27,13 @@ header,
   left: 20px;
   z-index: 100;
   width: 30px;
-  transition: transform 0.2s;
-  
 }
 
 /* Logo bounce behavor on desktop */
 @media screen and (min-width: 1025px) {
   .top-logo:hover {
     animation-name: bounce;
-    animation-duration: 1.5s;
-  } 
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-      40% {transform: translateY(-15px);} 
-      60% {transform: translateY(-5px);} 
+    animation-duration: 1.2s;
   }
 }
 .body-top {
@@ -60,20 +53,20 @@ header,
   margin: auto;
   width: 100%;
   -webkit-backdrop-filter: blur(10px);
+
 }
+h2.heading,
 h1.slogan {
-  font-size: 4em;
-  text-align: center;
-  text-shadow: 2px 2px rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.11);
-}
-h2.heading {
   font-family: Pacifico, cursive;
   font-size: 4em;
   text-align: center;
   color: rgb(253, 186, 0);
   text-shadow: 3px 3px #ffffff;
   margin-bottom: 0.2em;
+}
+h1.slogan {
+  font-size: 4.5em;
+  background-color: rgba(0, 0, 0, 0.11);
 }
 
 /* Mobile heading sizes */
@@ -149,6 +142,9 @@ footer {
   height: 40px;
   transition: transform 1s;
   z-index: 99;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: pulse;
 }
 .nav-bar a {
   display: block;
@@ -183,7 +179,7 @@ footer {
   margin: auto;
   color: white;
   text-align: center;
-  transition: all 0.2s ease;  
+  transition: all 0.2s ease;
 }
 /* Mobile menu tweaks */
 @media screen and (max-width: 699px) {
@@ -261,7 +257,6 @@ h3 {
   transform: rotate(180deg);
 }
 
-
 .mission h1 {
   display: block;
   margin: auto;
@@ -301,7 +296,7 @@ h3 {
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
 }
 .price-tag:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 .price-tag.exclusive {
   flex: 1 1 40%;
@@ -334,6 +329,8 @@ h3 {
   padding: 1em;
   flex: 1 1 300px;
 }
+.contact .sub-section * {
+}
 .contact input[type="text"],
 textarea {
   display: block;
@@ -344,6 +341,10 @@ textarea {
   color: black;
   width: 100%;
 }
+.contact label {
+  display: inline-block;
+  margin: 0.5rem 0 0.5rem 0;
+}
 .contact input[type="text"]:focus,
 textarea:focus {
   transition: color 0.2s ease-out, background 0.2s ease-in;
@@ -353,4 +354,31 @@ textarea:focus {
 .contact .sub-section:last-of-type * {
   margin: auto;
   display: block;
+}
+/*### Animations ###*/
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
