@@ -1,27 +1,9 @@
-/* Fixes menubar to top 
-No longer needed with position: sticky!
-*/
-
-/* jQuery("document").ready(function($) {
-  const nav = $("#nav-bar");
-  const navOffset = $("#mission");  
-
-
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 1000) {
-      nav.addClass("nav-bar-fixed");
-      navOffset.addClass("nav-bar-offset");
-      
-    } else {
-      nav.removeClass("nav-bar-fixed");
-      navOffset.removeClass("nav-bar-offset");
-      
-    }
-  });
-}); */
+/* Hamburger menu */
+$(".menu-button").click(function(){
+  $(".nav-bar ul").toggleClass('open');
+});
 
 /* Smooth scrolling */
-// Select all links with hashes
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
