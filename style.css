@@ -55,18 +55,21 @@ header,
   -webkit-backdrop-filter: blur(10px);
 
 }
-h2.heading,
-h1.slogan {
+h1.slogan,
+h2.heading
+{
   font-family: Pacifico, cursive;
-  font-size: 4em;
   text-align: center;
   color: rgb(253, 186, 0);
   text-shadow: 3px 3px #ffffff;
   margin-bottom: 0.2em;
 }
 h1.slogan {
-  font-size: 4.5em;
   background-color: rgba(0, 0, 0, 0.11);
+  font-size: 3.8vw;  
+}
+h2.heading {
+  font-size: 4em;  
 }
 
 /* Mobile heading sizes */
