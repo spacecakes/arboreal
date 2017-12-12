@@ -170,8 +170,7 @@ footer {
   justify-content: center;
   display: flex;
 }
-.nav-bar li,
-.menu-button {
+.nav-bar li {
   flex: 0 1 150px;
   font-size: 1.5em;
   text-align: center;
@@ -200,23 +199,30 @@ footer {
 }
 /* Hamburger menu on mobile */
 @media screen and (max-width: 699px) {
+  .menu-button {
+    display: block;
+    width: 100%;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
   .nav-bar {
     position: fixed;
     height: auto;
     flex-direction: column;
-    width: 100%;
   }
   .nav-bar ul {
-
     display: none;
-    
+    width: 100%;
   }
   .nav-bar ul.open {
     display: flex;
+    flex-direction: column;
   }
-  .menu-button {
-    display: flex;
-    flex: 1 1 100%;
+  .nav-bar li {
+    flex: 1 1 25%;
+  }
+  .nav-bar li:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 
