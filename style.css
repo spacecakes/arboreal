@@ -206,12 +206,8 @@ footer {
     flex-direction: column;
     width: 100%;
   }
-  .nav-bar li {
-    flex: 1 1 50%;
-  }
   .nav-bar ul {
-    flex-wrap: wrap;
-    width: 100%;
+
     display: none;
     
   }
@@ -221,11 +217,6 @@ footer {
   .menu-button {
     display: flex;
     flex: 1 1 100%;
-  }
-}
-@media screen and (max-width: 350px) {
-  .nav-bar li {
-    flex-basis: 100%;
   }
 }
 

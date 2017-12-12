@@ -1,6 +1,6 @@
 /* Hamburger menu */
 $(".menu-button").click(function(){
-  $(".nav-bar ul").toggleClass('open');
+  $(".nav-bar ul").slideToggle('open');
 });
 
 /* Smooth scrolling */
