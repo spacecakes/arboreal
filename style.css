@@ -98,10 +98,7 @@ h2.heading {
 
 /* Dumb phone tweaks*/
 @media screen and (max-width: 320px) {
-  header {
-    height: 120px;
-  }
-  .slogan-wrapper,
+  header, .slogan-wrapper,
   .hero-image {
     display: none;
   }
@@ -119,6 +116,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  min-width: 250px;
 }
 .body-wrapper {
   width: 100%;
@@ -320,7 +318,7 @@ h3 {
 }
 
 /* Smartphone mission tweaks */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (min-width: 321px) {
   .mission.section-wrapper {
     border-top: 5px solid rgb(252, 43, 88);
   }
