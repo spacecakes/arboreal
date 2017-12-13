@@ -1,4 +1,4 @@
-/* Remove default browser styles */
+/*### Remove default browser styles ###*/
 * {
   list-style: none;
   text-decoration: none;
@@ -70,8 +70,8 @@ h2.heading {
   font-size: 4em;
 }
 
-/* Mobile heading sizes */
-@media screen and (max-width: 1025px) {
+/* Tablet heading tweaks */
+@media screen and (max-width: 1024px) {
   h1.slogan {
     font-size: 3rem;
   }
@@ -81,7 +81,7 @@ h2.heading {
 }
 
 /* Smartphone tweaks*/
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 640px) {
   .top-logo {
     top: auto;
     bottom: 20px;
@@ -92,11 +92,12 @@ h2.heading {
   }
   h2.heading {
     font-size: 3rem;
+    text-shadow: 2px 2px #ffffff;
   }
 }
 
 /* Dumb phone tweaks*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 320px) {
   header {
     height: 120px;
   }
@@ -144,6 +145,9 @@ footer {
 }
 
 /*### Navigation bar & buttons ###*/
+.mobile-menu {
+  display: none;
+}
 .nav-bar {
   position: sticky;
   position: -webkit-sticky;
@@ -154,15 +158,10 @@ footer {
   align-items: center;
   background-color: rgb(252, 43, 88);
   height: 40px;
-  transition: transform 1s ease;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-name: pulse;
 }
 .nav-bar a {
   display: block;
   width: 100%;
-  transition: transform 1s ease;
 }
 .nav-bar ul {
   flex-basis: 100%;
@@ -179,9 +178,6 @@ footer {
   justify-content: center;
   transition: background-color 0.2s;
 }
-.menu-button {
-  display: none;
-}
 .button {
   -webkit-appearance: none;
   align-self: center;
@@ -197,49 +193,23 @@ footer {
   text-align: center;
   transition: all 0.2s ease;
 }
-/* Hamburger menu on mobile */
-@media screen and (max-width: 699px) {
-  .menu-button {
-    display: block;
-    width: 100%;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-  }
-  .nav-bar {
-    position: fixed;
-    height: auto;
-    flex-direction: column;
-  }
-  .nav-bar ul {
-    display: none;
-    width: 100%;
-  }
-  .nav-bar ul.open {
-    display: flex;
-    flex-direction: column;
-  }
-  .nav-bar li {
-    flex: 1 1 25%;
-  }
-  .nav-bar li:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
 
-/* Interactive hover/active behaviors */
-.nav-bar li:active a {
-  font-size: 100%;
-}
-.button:active {
-  font-size: 130%;
-}
-@media screen and (min-width: 1025px) {
+/* Navigation animations on desktop  */
+@media (min-width: 1025px) {
+  .nav-bar {
+    transition: transform 1s ease;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-name: pulse;
+  }
+  .nav-bar a {
+    transition: transform 1s ease;
+  }
   .nav-bar:hover {
     transform: scaleY(2) translateY(10px);
   }
-
   .nav-bar:hover a {
-    transform: scaleY(0.5) scale(1.2);
+    transform: scaleY(0.5);
   }
   .nav-bar li:hover a {
     font-family: Pacifico, cursive;
@@ -255,6 +225,50 @@ footer {
     font-size: 160%;
     transform: scale(1.1);
   }
+}
+
+/* Hamburger menu on mobile */
+@media screen and (max-width: 480px) {
+  .mobile-menu {
+    position: fixed;
+    display: block;
+    align-self: flex-start;
+    z-index: 100;
+    font-size: 1.5rem;
+    padding: 0 2px 0 6px;
+    text-shadow: 2px 2px rgb(252, 43, 88);
+  }
+  .nav-bar {
+    position: fixed;
+    flex-direction: column;
+    height: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+  }
+  .nav-bar ul {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .nav-bar.open {
+    display: flex;
+    transform: translateY(0);
+  }
+  .nav-bar li {
+    flex: 1 1 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-bar li {
+    flex: 1 1 100%;
+  }
+}
+
+.nav-bar li:active a {
+  font-size: 100%;
+}
+.button:active {
+  font-size: 130%;
 }
 
 /*### Main sections ###*/
@@ -274,8 +288,19 @@ h3 {
   margin: auto;
   max-width: 1200px;
 }
-/* Mission section */
 
+/* Animation behavior on desktop */
+@media screen and (min-width: 1025px) {
+  .price-tag:hover,
+  .theme-image:hover {
+    transform: scale(1.02);
+  }
+  .mission .logo:hover {
+    transform: rotate(180deg);
+  }
+}
+
+/* Mission section */
 .mission .logo {
   display: block;
   margin: auto;
@@ -286,11 +311,6 @@ h3 {
   padding: 2em;
   transition: transform 0.5s;
 }
-
-.mission .logo:hover {
-  transform: rotate(180deg);
-}
-
 .mission h1 {
   display: block;
   margin: auto;
@@ -300,7 +320,7 @@ h3 {
 }
 
 /* Smartphone mission tweaks */
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 480px) {
   .mission.section-wrapper {
     border-top: 5px solid rgb(252, 43, 88);
   }
@@ -308,6 +328,7 @@ h3 {
     font-size: 1.5rem;
   }
 }
+
 /* Themes section */
 .theme-image {
   width: 100%;
@@ -319,10 +340,12 @@ h3 {
   object-fit: cover;
 }
 
-/* Specific sections hover behaviors */
-.price-tag:hover,
-.theme-image:hover {
-  transform: scale(1.02);
+/* Smartphone tweaks for box shadowing*/
+@media screen and (max-width: 640px) {
+  .theme-image,
+  .price-tag {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  }
 }
 
 /* Price section */
