@@ -336,6 +336,7 @@ textarea:focus {
   .nav-bar li:hover,
   .button:hover {
     background-color: rgb(253, 186, 0);
+    cursor: pointer;
   }
   .button:hover {
     border: 5px solid white;
