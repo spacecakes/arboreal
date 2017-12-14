@@ -15,14 +15,6 @@
   z-index: 100;
   width: 30px;
 }
-
-/* Logo bounce behavor on desktop */
-@media screen and (min-width: 1025px) {
-  .top-logo:hover {
-    animation-name: bounce;
-    animation-duration: 1.2s;
-  }
-}
 header,
 .hero-image {
   width: 100%;
@@ -68,44 +60,6 @@ h1.slogan {
 }
 h2.heading {
   font-size: 4em;
-}
-
-/* Tablet heading tweaks */
-@media screen and (max-width: 1024px) {
-  h1.slogan {
-    font-size: 3rem;
-  }
-  h2.heading {
-    font-size: 3.5rem;
-  }
-}
-
-/* Smartphone tweaks*/
-@media screen and (max-width: 640px) {
-  .top-logo {
-    top: auto;
-    bottom: 10px;
-    left: 10px;
-    width: 20px;
-  }
-  h1.slogan {
-    font-size: 2.5rem;
-  }
-  h2.heading {
-    font-size: 3rem;
-    text-shadow: 2px 2px #ffffff;
-  }
-}
-
-/* Dumb phone tweaks*/
-@media screen and (max-width: 320px) {
-  header, .slogan-wrapper,
-  .hero-image {
-    display: none;
-  }
-  h2.heading {
-    font-size: 2rem;
-  }
 }
 /*### General body styling ###*/
 body * {
@@ -192,83 +146,6 @@ footer {
   transition: all 0.2s ease;
 }
 
-/* Navigation animations on desktop  */
-@media (min-width: 1025px) {
-  .nav-bar {
-    transition: transform 1s ease;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-name: pulse;
-  }
-  .nav-bar a {
-    transition: transform 1s ease;
-  }
-  .nav-bar:hover {
-    transform: scaleY(2) translateY(10px);
-  }
-  .nav-bar:hover a {
-    transform: scaleY(0.5);
-  }
-  .nav-bar li:hover a {
-    font-family: Pacifico, cursive;
-    text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
-    font-size: 120%;
-  }
-  .nav-bar li:hover,
-  .button:hover {
-    background-color: rgb(253, 186, 0);
-  }
-  .button:hover {
-    border: 5px solid white;
-    font-size: 160%;
-    transform: scale(1.1);
-  }
-}
-
-/* Hamburger menu on mobile */
-@media screen and (max-width: 480px) {
-  .mobile-menu {
-    position: fixed;
-    display: block;
-    align-self: flex-start;
-    z-index: 100;
-    font-size: 1.5rem;
-    padding: 0 2px 0 6px;
-    text-shadow: 2px 2px rgb(252, 43, 88);
-  }
-  .nav-bar {
-    position: fixed;
-    flex-direction: column;
-    height: auto;
-    transform: translateY(-100%);
-    transition: transform 0.3s;
-  }
-  .nav-bar ul {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .nav-bar.open {
-    display: flex;
-    transform: translateY(0);
-  }
-  .nav-bar li {
-    flex: 1 1 50%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .nav-bar li {
-    flex: 1 1 100%;
-  }
-}
-
-.nav-bar li:active a {
-  font-size: 100%;
-}
-.button:active {
-  font-size: 130%;
-}
-
 /*### Main sections ###*/
 p,
 h3 {
@@ -286,18 +163,6 @@ h3 {
   margin: auto;
   max-width: 1200px;
 }
-
-/* Animation behavior on desktop */
-@media screen and (min-width: 1025px) {
-  .price-tag:hover,
-  .theme-image:hover {
-    transform: scale(1.02);
-  }
-  .mission .logo:hover {
-    transform: rotate(180deg);
-  }
-}
-
 /* Mission section */
 .mission .logo {
   display: block;
@@ -315,16 +180,6 @@ h3 {
   max-width: 1000px;
   text-align: center;
   font-size: 1.5em;
-}
-
-/* Smartphone mission tweaks */
-@media screen and (max-width: 480px) and (min-width: 321px) {
-  .mission.section-wrapper {
-    border-top: 5px solid rgb(252, 43, 88);
-  }
-  .mission h1 {
-    font-size: 1.5rem;
-  }
 }
 
 /* Themes section */
@@ -373,13 +228,6 @@ h3 {
 .price-tag.exclusive li:last-of-type {
   background-color: rgb(253, 186, 0);
 }
-/* Smartphone tweaks for box shadowing*/
-@media screen and (max-width: 640px) {
-  .theme-image,
-  .price-tag {
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-  }
-}
 
 /*### Contact form ###*/
 .contact {
@@ -395,8 +243,6 @@ h3 {
 .contact .sub-section {
   padding: 1em;
   flex: 1 1 300px;
-}
-.contact .sub-section * {
 }
 .contact input[type="text"],
 textarea {
@@ -447,5 +293,148 @@ textarea:focus {
   }
   to {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+/*### Desktop adaptions ###*/
+@media screen and (min-width: 1025px) {
+  /* Logo bounce behavor */
+  .top-logo:hover {
+    animation-name: bounce;
+    animation-duration: 1.2s;
+  }
+  /* Section animation */
+  .price-tag:hover,
+  .theme-image:hover {
+    transform: scale(1.02);
+  }
+  .mission .logo:hover {
+    transform: rotate(180deg);
+  }
+  /* Navigation animations  */
+  .nav-bar {
+    transition: transform 1s ease;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-name: pulse;
+  }
+  .nav-bar a {
+    transition: transform 1s ease;
+  }
+  .nav-bar:hover {
+    transform: scaleY(2) translateY(10px);
+  }
+  .nav-bar:hover a {
+    transform: scaleY(0.5);
+  }
+  .nav-bar li:hover a {
+    font-family: Pacifico, cursive;
+    text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
+    font-size: 120%;
+  }
+  .nav-bar li:hover,
+  .button:hover {
+    background-color: rgb(253, 186, 0);
+  }
+  .button:hover {
+    border: 5px solid white;
+    font-size: 160%;
+    transform: scale(1.1);
+  }
+  /* Button click font effect */
+  .nav-bar li:active a {
+    font-size: 100%;
+  }
+  .button:active {
+    font-size: 130%;
+  }
+}
+
+/*### Tablet adaptions ###*/
+@media screen and (max-width: 1024px) {
+  /* Tablet heading tweaks */
+  h1.slogan {
+    font-size: 3rem;
+  }
+  h2.heading {
+    font-size: 3.5rem;
+  }
+}
+
+/* ### Smartphone adaptions ### */
+@media screen and (max-width: 640px) {
+  /* Logo and heading */
+  .top-logo {
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    width: 20px;
+  }
+  h1.slogan {
+    font-size: 2.5rem;
+  }
+  h2.heading {
+    font-size: 3rem;
+    text-shadow: 2px 2px #ffffff;
+  }
+  /* Box shadowing*/
+  .theme-image,
+  .price-tag {
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 480px) {
+  /* Hamburger menu on mobile */
+  .mobile-menu {
+    position: fixed;
+    display: block;
+    align-self: flex-start;
+    z-index: 100;
+    font-size: 1.5rem;
+    padding: 0 2px 0 6px;
+    text-shadow: 2px 2px rgb(252, 43, 88);
+  }
+  .nav-bar {
+    position: fixed;
+    flex-direction: column;
+    height: auto;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+  }
+  .nav-bar ul {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .nav-bar.open {
+    display: flex;
+    transform: translateY(0);
+  }
+  .nav-bar li {
+    flex: 1 1 50%;
+  }
+  /* Border under header (instead of nav bar) */
+  .mission.section-wrapper {
+    border-top: 5px solid rgb(252, 43, 88);
+  }
+  .mission h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/*### Dumb phone tweaks ###*/
+@media screen and (max-width: 320px) {
+  header,
+  .slogan-wrapper,
+  .hero-image {
+    display: none;
+  }
+  h2.heading {
+    font-size: 2rem;
+  }
+  .nav-bar li {
+    flex: 1 1 100%;
+  }
+  .mission h1 {
+    font-size: 1.3rem;
   }
 }
