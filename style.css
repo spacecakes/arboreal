@@ -7,6 +7,41 @@
   box-sizing: border-box;
 }
 
+/*### General body styling ###*/
+body * {
+  color: white;
+  font-family: Nunito, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 280px;
+}
+.site-wrapper {
+  width: 100%;
+  font-size: 1.2em;
+  background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
+}
+footer {
+  padding: 5rem;
+  text-align: center;
+  background-color: rgb(104, 179, 179);
+  width: 100%;
+}
+.back-to-top * {
+  color: rgb(124, 201, 201);
+  text-transform: uppercase;
+}
+.back-to-top a {
+  margin-top: 10rem;
+  display: block;
+  font-size: 5rem;
+  animation: bounce;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
 /*### Hero image, titles and logo ###*/
 .top-logo {
   position: fixed;
@@ -60,40 +95,6 @@ h1.slogan {
 }
 h2.heading {
   font-size: 4em;
-}
-/*### General body styling ###*/
-body * {
-  color: white;
-  font-family: Nunito, Verdana, sans-serif;
-}
-body {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-width: 280px;
-}
-.body-wrapper {
-  width: 100%;
-  font-size: 1.2em;
-  background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
-}
-footer {
-  padding: 5rem;
-  text-align: center;
-  background-color: rgb(104, 179, 179);
-  width: 100%;
-}
-.back-to-top * {
-  color: rgb(124, 201, 201);
-  text-transform: uppercase;
-}
-.back-to-top a {
-  margin-top: 10rem;
-  display: block;
-  font-size: 5rem;
-  animation: bounce;
-  animation-duration: 1.2s;
-  animation-iteration-count: infinite;
 }
 
 /*### Navigation bar & buttons ###*/
