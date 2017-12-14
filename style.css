@@ -444,3 +444,11 @@ textarea:focus {
     font-size: 1.3rem;
   }
 }
+
+/*### Browser-specific tweaks ###*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* Fix for object-fit in IE */
+  .theme-image {
+    height: auto;
+  }
+}
