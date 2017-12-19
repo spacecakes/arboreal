@@ -5,7 +5,8 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
 }
 
 /*### General body styling ###*/
@@ -18,19 +19,25 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-width: 280px;
 }
 .site-wrapper {
   width: 100%;
   font-size: 1.2em;
   background: #91bdbd; /* Fallback for older browsers */
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(145, 189, 189)), to(rgb(104, 179, 179)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgb(145, 189, 189)),
+    to(rgb(104, 179, 179))
+  );
   background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
 }
 footer {
@@ -48,11 +55,11 @@ footer {
   display: block;
   font-size: 5rem;
   -webkit-animation: bounce;
-          animation: bounce;
+  animation: bounce;
   -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  animation-duration: 1.2s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 /*### Hero image, titles and logo ###*/
@@ -124,8 +131,8 @@ h2.heading {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: rgb(252, 43, 88);
   height: 40px;
 }
@@ -135,37 +142,37 @@ h2.heading {
 }
 .nav-bar ul {
   -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   height: 100%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .nav-bar li {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 150px;
-          flex: 0 1 150px;
+  -ms-flex: 0 1 150px;
+  flex: 0 1 150px;
   font-size: 1.5em;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 .button {
   -webkit-appearance: none;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   border: 0;
   height: 80px;
   width: 200px;
@@ -225,14 +232,14 @@ h3 {
   height: 200px;
   border: 5px solid white;
   -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* Price section */
@@ -241,19 +248,19 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 80vw;
   padding: 5% 0% 5% 0%;
 }
 .price-tag {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   margin: 1.5vh;
   text-align: center;
   border-radius: 10px;
@@ -263,17 +270,23 @@ h3 {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 20%;
-          flex: 1 1 20%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(156, 116, 172)), to(rgb(166, 86, 196)));
+  -ms-flex: 1 1 20%;
+  flex: 1 1 20%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgb(156, 116, 172)),
+    to(rgb(166, 86, 196))
+  );
   background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
   -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
 }
 .price-tag.exclusive {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
+  flex: 1 1 40%;
 }
 .price-tag li {
   padding: 1.2em;
@@ -295,25 +308,25 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .contact form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 1000px;
 }
 .contact .sub-section {
   padding: 1em;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
+  -ms-flex: 1 1 300px;
+  flex: 1 1 300px;
 }
 .contact input[type="text"],
 textarea {
@@ -347,15 +360,15 @@ textarea:focus {
   80%,
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   40% {
     -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    transform: translateY(-15px);
   }
   60% {
     -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    transform: translateY(-5px);
   }
 }
 @keyframes bounce {
@@ -365,43 +378,43 @@ textarea:focus {
   80%,
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   40% {
     -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    transform: translateY(-15px);
   }
   60% {
     -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    transform: translateY(-5px);
   }
 }
 @-webkit-keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
   }
   to {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 @keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
   }
   to {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
@@ -410,19 +423,19 @@ textarea:focus {
   /* Logo bounce behavor */
   .top-logo:hover {
     -webkit-animation-name: bounce;
-            animation-name: bounce;
+    animation-name: bounce;
     -webkit-animation-duration: 1.2s;
-            animation-duration: 1.2s;
+    animation-duration: 1.2s;
   }
   /* Section animation */
   .price-tag:hover,
   .theme-image:hover {
     -webkit-transform: scale(1.02);
-            transform: scale(1.02);
+    transform: scale(1.02);
   }
   .mission .logo:hover {
     -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   /* Navigation animations  */
   .nav-bar {
@@ -431,11 +444,11 @@ textarea:focus {
     transition: transform 1s ease;
     transition: transform 1s ease, -webkit-transform 1s ease;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
+    animation-delay: 0.5s;
     -webkit-animation-name: pulse;
-            animation-name: pulse;
+    animation-name: pulse;
   }
   .nav-bar a {
     -webkit-transition: -webkit-transform 1s ease;
@@ -445,11 +458,11 @@ textarea:focus {
   }
   .nav-bar:hover {
     -webkit-transform: scaleY(2) translateY(10px);
-            transform: scaleY(2) translateY(10px);
+    transform: scaleY(2) translateY(10px);
   }
   .nav-bar:hover a {
     -webkit-transform: scaleY(0.5);
-            transform: scaleY(0.5);
+    transform: scaleY(0.5);
   }
   .nav-bar li:hover a {
     font-family: Pacifico, cursive;
@@ -465,7 +478,7 @@ textarea:focus {
     border: 5px solid white;
     font-size: 160%;
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   /* Button click font effect */
   .nav-bar li:active a {
@@ -507,7 +520,7 @@ textarea:focus {
   .theme-image,
   .price-tag {
     -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
-            box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
   }
 }
 @media screen and (max-width: 480px) {
@@ -516,7 +529,7 @@ textarea:focus {
     position: fixed;
     display: block;
     -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
     z-index: 100;
     font-size: 1.5rem;
     padding: 0 2px 0 6px;
@@ -526,11 +539,11 @@ textarea:focus {
     position: fixed;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     height: auto;
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
     -webkit-transition: -webkit-transform 0.3s;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -539,19 +552,19 @@ textarea:focus {
   .nav-bar ul {
     width: 100%;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .nav-bar.open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   .nav-bar li {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
   }
   /* Border under header (instead of nav bar) */
   .mission.section-wrapper {
@@ -580,8 +593,8 @@ textarea:focus {
   }
   .nav-bar li {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
   }
   .mission h1 {
     font-size: 1.3rem;
@@ -594,6 +607,6 @@ textarea:focus {
   .theme-image {
     height: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
