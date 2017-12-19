@@ -21,6 +21,7 @@ body {
 .site-wrapper {
   width: 100%;
   font-size: 1.2em;
+  background: #91bdbd; /* Fallback for older browsers */
   background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
 }
 footer {
