@@ -52,19 +52,4 @@ The website validates with the exception of the above mentioned experimental, bu
 
 Ironically, `@supports` does not validate either, which causes a few errors, but since feature queries were part of the assignment, I need to ignore them.
 
-**Everything else is fully functional and properly validates**.
-
-###Errors
-```
-48	.slogan	Value Error : position sticky is not a position value : sticky
-90	.nav-bar	Value Error : position sticky is not a position value : sticky
-```
-
-###Warnings
-```
-49		Property -webkit-sticky is an unknown vendor extension
-53		Property -webkit-backdrop-filter is an unknown vendor extension
-91		Property -webkit-sticky is an unknown vendor extension
-135		Property -webkit-transition is an unknown vendor extension
-274		Property -webkit-appearance is an unknown vendor extension
-```
+The full CSS validation sheet can be [found here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fspacecakes.github.io%2Farboreal%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=sv). HTML validates with the exception of a stray script tag and an illegal character in the Google Fonts link, both of which are necessary. 
