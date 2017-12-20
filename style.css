@@ -381,7 +381,10 @@ textarea:focus {
 @media screen and (max-width: 1024px) {
   /* Tablet heading tweaks */
   h1.slogan {
-    font-size: 3rem;
+    font-size: 15vw;
+  }
+  h2.slogan {
+    font-size: 4vw;
   }
   h2.heading {
     font-size: 3.5rem;
@@ -398,7 +401,12 @@ textarea:focus {
     width: 20px;
   }
   h1.slogan {
-    font-size: 2.5rem;
+    font-size: 15vw;
+    text-shadow: 2px 2px #ffffff;
+  }
+  h2.slogan {
+    text-shadow: 1px 1px #ffffff;
+
   }
   h2.heading {
     font-size: 3rem;
