@@ -1,7 +1,6 @@
 /*### Remove default browser styles ###*/
 * {
   list-style: none;
-  text-decoration: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -25,6 +24,24 @@ body {
   background-color: #91bdbd; /* Fallback for older browsers */
   background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
 }
+
+.browser-warning {
+  /* Warning for incompatible browsers */
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: black;
+}
+
+@supports (display: flex) {
+  .browser-warning {
+    display: none;
+  }
+}
+
 footer {
   padding: 5rem;
   text-align: center;
@@ -109,7 +126,7 @@ h2.headline {
   display: none;
 }
 
-/* Fallback menubar */
+/* Simple menubar */
 .nav-bar {
   position: fixed;
   z-index: 99;
@@ -119,6 +136,7 @@ h2.headline {
   background-color: rgb(252, 43, 88);
 }
 .nav-bar a {
+  text-decoration: none;
   display: block;
   float: left;
   width: 25%;
