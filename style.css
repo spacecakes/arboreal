@@ -111,7 +111,8 @@ h2.headline {
 .nav-bar {
   position: fixed;
   z-index: 99;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -221,6 +222,7 @@ h3 {
   border: 5px dashed white;
   transition: transform 0.5s;
   flex: 1 1 20%;
+  background-color: rgb(156, 116, 172); /* Fallback for older browsers */
   background: linear-gradient(rgb(156, 116, 172), rgb(166, 86, 196));
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
 }
