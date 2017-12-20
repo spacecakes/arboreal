@@ -14,6 +14,9 @@ body * {
   font-family: Nunito, Verdana, sans-serif;
 }
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   min-width: 280px;
 }
 .site-wrapper {
@@ -112,11 +115,10 @@ h2.headline {
   z-index: 99;
   top: 0px;
   width: 100%;
+  display: flex;
+  align-items: center;
   background-color: rgb(252, 43, 88);
   height: 40px;
-}
-.nav-bar * {
-  border: 2px solid blue;
 }
 .nav-bar a {
   display: block;
@@ -303,6 +305,23 @@ textarea:focus {
   }
 }
 
+/*### Browser-specific tweaks ###*/
+@supports (position: sticky) or (position: -webkit-sticky) {
+  /* Sticky menu and headline for browsers that support it */
+  .slogan-wrapper,
+  .nav-bar {
+    position: sticky;
+    position: -webkit-sticky;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* Fix for object-fit in IE */
+  .theme-image {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
 /*### Desktop adaptions ###*/
 @media screen and (min-width: 1025px) {
   /* Logo bounce behavor */
@@ -395,11 +414,11 @@ textarea:focus {
   /* Hamburger menu on mobile */
   .mobile-menu {
     position: fixed;
-    top: 2px;
-    left: 6px;
     display: block;
+    align-self: flex-start;
     z-index: 100;
     font-size: 1.5rem;
+    padding: 0 2px 0 6px;
     text-shadow: 2px 2px rgb(252, 43, 88);
   }
   .nav-bar {
@@ -452,6 +471,7 @@ textarea:focus {
     font-size: 1.3rem;
   }
 }
+<<<<<<< HEAD
 
 /*### Browser-specific tweaks ###*/
 <<<<<<< HEAD
@@ -476,3 +496,5 @@ textarea:focus {
 =======
 }
 >>>>>>> parent of 84d0627... fixed menus for unsupported browsers + more
+=======
+>>>>>>> parent of 397c0f6... removed unecessary code
