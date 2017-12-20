@@ -80,7 +80,6 @@ header,
   top: 30%;
   width: 100%;
 }
-
 h1.slogan,
 h2.slogan,
 h2.headline {
@@ -110,8 +109,7 @@ h2.headline {
   display: none;
 }
 .nav-bar {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   z-index: 99;
   top: 0px;
   width: 100%;
@@ -139,6 +137,21 @@ h2.headline {
   justify-content: center;
   transition: background-color 0.2s;
 }
+.mission.section-wrapper {
+  border-top: 5px solid rgb(252, 43, 88);
+}
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+  /* Sticky menu and headline for browsers that support it */
+  .slogan-wrapper,
+  .nav-bar {
+    position: sticky;
+    position: -webkit-sticky;
+  }
+  .mission.section-wrapper {
+    border-top: none;
+}
+
 .button {
   -webkit-appearance: none;
   align-self: center;
@@ -305,22 +318,6 @@ textarea:focus {
   }
 }
 
-/*### Browser-specific tweaks ###*/
-@supports (position: sticky) or (position: -webkit-sticky) {
-  /* Sticky menu and headline for browsers that support it */
-  .slogan-wrapper,
-  .nav-bar {
-    position: sticky;
-    position: -webkit-sticky;
-  }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* Fix for object-fit in IE */
-  .theme-image {
-    height: 100%;
-    object-fit: contain;
-  }
-}
 
 /*### Desktop adaptions ###*/
 @media screen and (min-width: 1025px) {
@@ -447,10 +444,6 @@ textarea:focus {
   .nav-bar li {
     flex: 1 1 50%;
   }
-  /* Border under header (instead of nav bar) */
-  .mission.section-wrapper {
-    border-top: 5px solid rgb(252, 43, 88);
-  }
   .mission h1 {
     font-size: 1.5rem;
   }
@@ -459,6 +452,9 @@ textarea:focus {
     font-size: 75%;
     font-family: Pacifico, cursive;
     text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
+  }
+  .mission.section-wrapper {
+    border-top: 5px solid rgb(252, 43, 88);
   }
 }
 
@@ -479,30 +475,12 @@ textarea:focus {
     font-size: 1.3rem;
   }
 }
-<<<<<<< HEAD
 
 /*### Browser-specific tweaks ###*/
-<<<<<<< HEAD
-@supports (position: sticky) or (position: -webkit-sticky) {
-  /* Sticky menu and headline for browsers that support it */
-  .slogan-wrapper,
-  .nav-bar {
-    position: sticky;
-    position: -webkit-sticky;
-  }
-}
-=======
->>>>>>> parent of 84d0627... fixed menus for unsupported browsers + more
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* Fix for object-fit in IE */
   .theme-image {
     height: 100%;
     object-fit: contain;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> parent of 84d0627... fixed menus for unsupported browsers + more
-=======
->>>>>>> parent of 397c0f6... removed unecessary code
