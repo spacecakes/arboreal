@@ -19,7 +19,7 @@ body {
 .site-wrapper {
   width: 100%;
   font-size: 1.2em;
-  background-color: #91bdbd; /* Fallback for older browsers */
+  background: #91bdbd; /* Fallback for older browsers */
   background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
 }
 footer {
@@ -84,13 +84,14 @@ h2.headline {
   text-align: center;
   color: rgb(253, 186, 0);
   text-shadow: 3px 3px #ffffff;
+  font-family: Pacifico, cursive;
 }
 h1.slogan {
-  font-family: Pacifico, cursive;
   font-size: 12vw;
   line-height: 1em;
 }
 h2.slogan {
+  font-family: Nunito, Verdana, sans-serif;
   text-shadow: 2px 2px #ffffff;
   font-size: 2.2vw;
   line-height: 2.5em;
@@ -106,7 +107,8 @@ h2.headline {
   display: none;
 }
 .nav-bar {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   z-index: 99;
   top: 0px;
   width: 100%;
@@ -149,10 +151,6 @@ h2.headline {
   color: white;
   text-align: center;
   transition: all 0.2s ease;
-}
-/* Border under header (instead of sticky nav bar) */
-.mission.section-wrapper {
-  border-top: 5px solid rgb(252, 43, 88);
 }
 
 /*### Main sections ###*/
@@ -362,19 +360,18 @@ textarea:focus {
 
 /*### Tablet adaptions ###*/
 @media screen and (max-width: 1024px) {
-  /* Tablet headline tweaks */
-  h2.slogan {
-    text-shadow: 1px 1px #ffffff;
-    font-size: 4vw;
+  /* Tablet heading tweaks */
+  h1.slogan {
+    font-size: 3rem;
   }
-  h2.headline {
+  h2.heading {
     font-size: 3.5rem;
   }
 }
 
 /* ### Smartphone adaptions ### */
 @media screen and (max-width: 640px) {
-  /* Logo and headline */
+  /* Logo and heading */
   .top-logo {
     top: auto;
     bottom: 10px;
@@ -382,9 +379,9 @@ textarea:focus {
     width: 20px;
   }
   h1.slogan {
-    text-shadow: 2px 2px #ffffff;
+    font-size: 2.5rem;
   }
-  h2.headline {
+  h2.heading {
     font-size: 3rem;
     text-shadow: 2px 2px #ffffff;
   }
@@ -423,6 +420,10 @@ textarea:focus {
   .nav-bar li {
     flex: 1 1 50%;
   }
+  /* Border under header (instead of nav bar) */
+  .mission.section-wrapper {
+    border-top: 5px solid rgb(252, 43, 88);
+  }
   .mission h1 {
     font-size: 1.5rem;
   }
@@ -441,7 +442,7 @@ textarea:focus {
   .hero-image {
     display: none;
   }
-  h2.headline {
+  h2.heading {
     font-size: 2rem;
   }
   .nav-bar li {
@@ -453,6 +454,7 @@ textarea:focus {
 }
 
 /*### Browser-specific tweaks ###*/
+<<<<<<< HEAD
 @supports (position: sticky) or (position: -webkit-sticky) {
   /* Sticky menu and headline for browsers that support it */
   .slogan-wrapper,
@@ -461,10 +463,16 @@ textarea:focus {
     position: -webkit-sticky;
   }
 }
+=======
+>>>>>>> parent of 84d0627... fixed menus for unsupported browsers + more
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* Fix for object-fit in IE */
   .theme-image {
     height: 100%;
     object-fit: contain;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 84d0627... fixed menus for unsupported browsers + more
