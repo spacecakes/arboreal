@@ -37,6 +37,7 @@ body {
 }
 
 @supports (display: flex) {
+  /* Hide warning on modern browsers */
   .browser-warning {
     display: none;
   }
@@ -47,6 +48,9 @@ footer {
   text-align: center;
   background-color: rgb(104, 179, 179);
   width: 100%;
+}
+footer a {
+  text-decoration: none;
 }
 .back-to-top * {
   color: rgb(124, 201, 201);
@@ -136,7 +140,6 @@ h2.headline {
   background-color: rgb(252, 43, 88);
 }
 .nav-bar a {
-  text-decoration: none;
   display: block;
   float: left;
   width: 25%;
@@ -157,6 +160,7 @@ h2.headline {
     display: block;
     float: none;
     width: 100%;
+    text-decoration: none;
   }
   .nav-bar ul {
     flex-basis: 100%;
@@ -413,21 +417,21 @@ textarea:focus {
 
 /*### Tablet adaptions ###*/
 @media screen and (max-width: 1024px) {
-  /* Tablet heading tweaks */
+  /* Tablet headline tweaks */
   h1.slogan {
     font-size: 15vw;
   }
   h2.slogan {
     font-size: 4vw;
   }
-  h2.heading {
+  h2.headline {
     font-size: 3.5rem;
   }
 }
 
 /* ### Smartphone adaptions ### */
 @media screen and (max-width: 640px) {
-  /* Logo and heading */
+  /* Logo and headline */
   .top-logo {
     top: auto;
     bottom: 10px;
@@ -441,8 +445,7 @@ textarea:focus {
   h2.slogan {
     text-shadow: 1px 1px #ffffff;
   }
-  h2.heading {
-    font-size: 3rem;
+  h2.headline {
     text-shadow: 2px 2px #ffffff;
   }
   /* Box shadowing*/
@@ -503,8 +506,8 @@ textarea:focus {
   .hero-image {
     display: none;
   }
-  h2.heading {
-    font-size: 2rem;
+  h2.headline {
+    font-size: 2.5rem;
   }
   .mission h1 {
     font-size: 1.3rem;

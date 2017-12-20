@@ -44,6 +44,8 @@ The website is built using `display: flex` to align much of the content. This do
 * Internet Explorer 11
 * Microsoft Edge 38
 
+Incompatible browsers will get a warning message. 
+
 
 ##Validation
 The website validates with the exception of the above mentioned experimental, but non-critical features. I decided to keep these because they do not affect the experience poorly in any way. Instead, they provide tiny benefits in browsers that do support it, i.e. _progressive enhancement_.
