@@ -12,7 +12,7 @@ It uses a (sticky) menubar, parallax scrolling and is fully responsive. Subtle u
 It also uses a tiny bit of jQuery to enable smooth scrolling. Originally it used jQuery to fix the menu to the top after scrolling, but I replaced it with `position: sticky` because it's a cleaner (albeit not as well-supported) solution. The JS scrolling is still there but commented out.
 
 ##Responsiveness
-The site is responsive from viewports ranging from `280px` wide and up. The breakpoints are very few and simple and they are mostly based on `max-width` in accordance with what work for the website rather than specific devices. For example, the menu bar does not collapse until there's a lack of screen width, meaning it's possible to have one appearance in landscape and another in portrait on mobile—whatever works best for the current viewing conditions. 
+The site is responsive from viewports ranging from `280px` wide and up. The breakpoints are very few and simple and they are mostly based on `max-width` in accordance with what work for the website rather than specific devices. For example, the menu bar does not collapse until there's a lack of screen width, meaning it's possible to have one appearance in landscape and another in portrait on mobile—whatever works best for the current viewing conditions. The responsive pattern could viewed as _mostly fluid_.
 
 The breakpoints are:
 
@@ -49,6 +49,8 @@ Incompatible browsers will get a warning message.
 
 ##Validation
 The website validates with the exception of the above mentioned experimental, but non-critical features. I decided to keep these because they do not affect the experience poorly in any way. Instead, they provide tiny benefits in browsers that do support it, i.e. _progressive enhancement_.
+
+Ironically, `@supports` does not validate either, which causes a few errors, but since feature queries were part of the assignment, I need to ignore them.
 
 **Everything else is fully functional and properly validates**.
 

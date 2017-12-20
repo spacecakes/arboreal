@@ -237,7 +237,7 @@ h3 {
   padding: 2em;
   transition: transform 0.5s;
 }
-.mission h1 {
+.mission h2 {
   display: block;
   margin: auto;
   max-width: 1000px;
@@ -484,7 +484,7 @@ textarea:focus {
     .nav-bar li {
       flex: 1 1 50%;
     }
-    .mission h1 {
+    .mission h2 {
       font-size: 1.5rem;
     }
     .nav-bar li:active a {
@@ -509,7 +509,7 @@ textarea:focus {
   h2.headline {
     font-size: 2.5rem;
   }
-  .mission h1 {
+  .mission h2 {
     font-size: 1.3rem;
   }
   @supports (display: flex) {
