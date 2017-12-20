@@ -34,7 +34,7 @@ The slogan has a blurred background in Safari using `-webkit-backdrop-filter: bl
 [html5shiv](https://github.com/aFarkas/html5shiv) is used to support older versions of IE that don't support semantic HTML. This is a script that simply replaces semantic elements with older generic versions.  
 
 ###Flexbox
-The website is built using `display: flex` to align much of the content. This does not work in older browsers.
+The website is built using `display: flex` to align much of the content. This does not work in older browsers, but the site remains readable without it with one notable exception: the menubar. I made a simpler version using `float` that is compatible with old browsers.
 
 ###Tested browsers
 * Safari 11

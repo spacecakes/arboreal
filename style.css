@@ -113,47 +113,31 @@ h2.headline {
 .nav-bar {
   position: fixed;
   z-index: 99;
-  top: 0px;
+  left: 0;
+  top: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
   background-color: rgb(252, 43, 88);
-  height: 40px;
 }
 .nav-bar a {
   display: block;
-  width: 100%;
-}
-.nav-bar ul {
-  flex-basis: 100%;
-  height: 100%;
-  justify-content: center;
-  display: flex;
+  float: left;
+  width: 25%;
 }
 .nav-bar li {
-  flex: 0 1 150px;
   font-size: 1.5em;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s;
 }
 
+/* Flexbox menubar */
 @supports (display: flex) {
-  /* Flexbox menubar */
   .nav-bar {
-    position: fixed;
-    z-index: 99;
-    top: 0px;
-    width: 100%;
     display: flex;
     align-items: center;
-    background-color: rgb(252, 43, 88);
     height: 40px;
   }
   .nav-bar a {
     display: block;
+    float: none;
     width: 100%;
   }
   .nav-bar ul {
@@ -164,8 +148,6 @@ h2.headline {
   }
   .nav-bar li {
     flex: 0 1 150px;
-    font-size: 1.5em;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,6 +168,7 @@ h2.headline {
   }
   .mission.section-wrapper {
     border-top: none;
+  }
 }
 
 .button {
@@ -355,7 +338,6 @@ textarea:focus {
   }
 }
 
-
 /*### Desktop adaptions ###*/
 @media screen and (min-width: 1025px) {
   /* Logo bounce behavor */
@@ -440,7 +422,6 @@ textarea:focus {
   }
   h2.slogan {
     text-shadow: 1px 1px #ffffff;
-
   }
   h2.heading {
     font-size: 3rem;
@@ -453,45 +434,47 @@ textarea:focus {
   }
 }
 @media screen and (max-width: 480px) {
-  /* Hamburger menu on mobile */
-  .mobile-menu {
-    position: fixed;
-    display: block;
-    align-self: flex-start;
-    z-index: 100;
-    font-size: 1.5rem;
-    padding: 0 2px 0 6px;
-    text-shadow: 2px 2px rgb(252, 43, 88);
-  }
-  .nav-bar {
-    position: fixed;
-    flex-direction: column;
-    height: auto;
-    transform: translateY(-100%);
-    transition: transform 0.3s;
-  }
-  .nav-bar ul {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .nav-bar.open {
-    display: flex;
-    transform: translateY(0);
-  }
-  .nav-bar li {
-    flex: 1 1 50%;
-  }
-  .mission h1 {
-    font-size: 1.5rem;
-  }
-  .nav-bar li:active a {
-    background-color: rgb(253, 186, 0);
-    font-size: 75%;
-    font-family: Pacifico, cursive;
-    text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
-  }
-  .mission.section-wrapper {
-    border-top: 5px solid rgb(252, 43, 88);
+  @supports (display: flex) {
+    /* Hamburger menu on mobile */
+    .mobile-menu {
+      position: fixed;
+      display: block;
+      align-self: flex-start;
+      z-index: 100;
+      font-size: 1.5rem;
+      padding: 0 2px 0 6px;
+      text-shadow: 2px 2px rgb(252, 43, 88);
+    }
+    .nav-bar {
+      position: fixed;
+      flex-direction: column;
+      height: auto;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+    .nav-bar ul {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    .nav-bar.open {
+      display: flex;
+      transform: translateY(0);
+    }
+    .nav-bar li {
+      flex: 1 1 50%;
+    }
+    .mission h1 {
+      font-size: 1.5rem;
+    }
+    .nav-bar li:active a {
+      background-color: rgb(253, 186, 0);
+      font-size: 75%;
+      font-family: Pacifico, cursive;
+      text-shadow: 2px 2px rgba(164, 41, 201, 0.767);
+    }
+    .mission.section-wrapper {
+      border-top: 5px solid rgb(252, 43, 88);
+    }
   }
 }
 
@@ -505,11 +488,13 @@ textarea:focus {
   h2.heading {
     font-size: 2rem;
   }
-  .nav-bar li {
-    flex: 1 1 100%;
-  }
   .mission h1 {
     font-size: 1.3rem;
+  }
+  @supports (display: flex) {
+    .nav-bar li {
+      flex: 1 1 100%;
+    }
   }
 }
 
