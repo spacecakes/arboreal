@@ -22,7 +22,7 @@ body {
 .site-wrapper {
   width: 100%;
   font-size: 1.2em;
-  background: #91bdbd; /* Fallback for older browsers */
+  background-color: #91bdbd; /* Fallback for older browsers */
   background: linear-gradient(rgb(145, 189, 189), rgb(104, 179, 179));
 }
 footer {
@@ -76,26 +76,31 @@ header,
   background-repeat: repeat-x;
 }
 .slogan-wrapper {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 35vh;
+  position: absolute;
+  top: 30%;
   width: 100%;
-  -webkit-backdrop-filter: blur(10px);
 }
+
 h1.slogan,
-h2.heading {
-  font-family: Pacifico, cursive;
+h2.slogan,
+h2.headline {
   text-align: center;
   color: rgb(253, 186, 0);
   text-shadow: 3px 3px #ffffff;
-  margin-bottom: 0.2em;
 }
 h1.slogan {
-  background-color: rgba(0, 0, 0, 0.11);
-  font-size: 3.8vw;
-  line-height: 200%;
+  font-family: Pacifico, cursive;
+  font-size: 12vw;
+  line-height: 1em;
 }
-h2.heading {
+h2.slogan {
+  text-shadow: 2px 2px #ffffff;
+  font-size: 2.2vw;
+  line-height: 2.5em;
+  background-color: rgba(0, 0, 0, 0.11);
+  -webkit-backdrop-filter: blur(10px);
+}
+h2.headline {
   font-size: 4em;
 }
 
@@ -104,8 +109,7 @@ h2.heading {
   display: none;
 }
 .nav-bar {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   z-index: 99;
   top: 0px;
   width: 100%;
@@ -147,6 +151,10 @@ h2.heading {
   color: white;
   text-align: center;
   transition: all 0.2s ease;
+}
+/* Border under header (instead of sticky nav bar) */
+.mission.section-wrapper {
+  border-top: 5px solid rgb(252, 43, 88);
 }
 
 /*### Main sections ###*/
@@ -299,6 +307,23 @@ textarea:focus {
   }
 }
 
+/*### Browser-specific tweaks ###*/
+@supports (position: sticky) or (position: -webkit-sticky) {
+  /* Sticky menu and headline for browsers that support it */
+  .slogan-wrapper,
+  .nav-bar {
+    position: sticky;
+    position: -webkit-sticky;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* Fix for object-fit in IE */
+  .theme-image {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
 /*### Desktop adaptions ###*/
 @media screen and (min-width: 1025px) {
   /* Logo bounce behavor */
@@ -356,18 +381,19 @@ textarea:focus {
 
 /*### Tablet adaptions ###*/
 @media screen and (max-width: 1024px) {
-  /* Tablet heading tweaks */
-  h1.slogan {
-    font-size: 3rem;
+  /* Tablet headline tweaks */
+  h2.slogan {
+    text-shadow: 1px 1px #ffffff;
+    font-size: 4vw;
   }
-  h2.heading {
+  h2.headline {
     font-size: 3.5rem;
   }
 }
 
 /* ### Smartphone adaptions ### */
 @media screen and (max-width: 640px) {
-  /* Logo and heading */
+  /* Logo and headline */
   .top-logo {
     top: auto;
     bottom: 10px;
@@ -375,9 +401,9 @@ textarea:focus {
     width: 20px;
   }
   h1.slogan {
-    font-size: 2.5rem;
+    text-shadow: 2px 2px #ffffff;
   }
-  h2.heading {
+  h2.headline {
     font-size: 3rem;
     text-shadow: 2px 2px #ffffff;
   }
@@ -416,10 +442,6 @@ textarea:focus {
   .nav-bar li {
     flex: 1 1 50%;
   }
-  /* Border under header (instead of nav bar) */
-  .mission.section-wrapper {
-    border-top: 5px solid rgb(252, 43, 88);
-  }
   .mission h1 {
     font-size: 1.5rem;
   }
@@ -438,7 +460,7 @@ textarea:focus {
   .hero-image {
     display: none;
   }
-  h2.heading {
+  h2.headline {
     font-size: 2rem;
   }
   .nav-bar li {
@@ -446,14 +468,5 @@ textarea:focus {
   }
   .mission h1 {
     font-size: 1.3rem;
-  }
-}
-
-/*### Browser-specific tweaks ###*/
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* Fix for object-fit in IE */
-  .theme-image {
-    height: 100%;
-    object-fit: contain;
   }
 }
