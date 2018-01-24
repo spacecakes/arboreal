@@ -83,7 +83,7 @@ footer a {
   width: 150px;
   height: 150px;
   z-index: -1;
-  animation: spin 30s linear infinite;
+  animation: spin 120s linear infinite;
 }
 header,
 .hero-image {
