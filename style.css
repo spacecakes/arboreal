@@ -73,6 +73,18 @@ footer a {
   z-index: 100;
   width: 30px;
 }
+.sun {
+  position: fixed;
+  display: block;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  animation: spin 30s linear infinite;
+}
 header,
 .hero-image {
   width: 100%;
@@ -101,6 +113,7 @@ header,
   top: 30%;
   width: 100%;
 }
+
 h1.slogan,
 h2.slogan,
 h2.headline {
@@ -332,7 +345,15 @@ textarea:focus {
   margin: auto;
   display: block;
 }
+
 /*### Animations ###*/
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,
